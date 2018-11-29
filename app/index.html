@@ -26,7 +26,6 @@
 <button class="btn btn-primary" ng-click="vm.alertMe()">alert something</button>
 <posts-list></posts-list>
 
-
 <h1>The sky is {{2 > 1}}ly blue.</h1>
 <h1>{{vm.hello}}</h1>
 <input type="text" ng-model="vm.hello">
@@ -46,23 +45,32 @@
 
 <div>AngularJS seed app: v<span app-version></span></div>
 
-<!-- In production use:
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
--->
-<script src="lib/angular/angular.js"></script>
-<script src="lib/angular-route/angular-route.js"></script>
-<script src="app.js"></script>
-<script src="view1/view1.js"></script>
-<script src="view2/view2.js"></script>
-<script src="post-list/posts-list.component.js"></script>
-<script src="core/version/version.js"></script>
-<script src="core/version/version-directive.js"></script>
-<script src="core/version/interpolate-filter.js"></script>
 <div class="container">
     <label>Name: </label>
     <input type="text" ng-model="yourName" placeholder="Enter your name">
     <hr>
     <h1>Hello! {{yourName}}</h1>
 </div>
+
+<hr>
+<upload-parse></upload-parse>
+
+
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular-route/angular-route.js"></script>
+<script src="lib/ng-file-upload/dist/ng-file-upload.js"></script>
+<script src="lib/papaparse/papaparse.js"></script>
+<script src="lib/angular-papa-promise/dist/angular-papa-promise.js"></script>
+<script src="app.js"></script>
+<script src="view1/view1.js"></script>
+<script src="view2/view2.js"></script>
+<script src="upload-parse/upload-parse.component.js"></script>
+<script src="post-list/posts-list.component.js"></script>
+<script src="core/version/version.js"></script>
+<script src="core/version/version-directive.js"></script>
+<script src="core/version/interpolate-filter.js"></script>
 </body>
 </html>

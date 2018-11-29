@@ -1,3 +1,5 @@
+'use strict';
+
 function PostsListController(mainSrv) {
   var vm = this;
   mainSrv.getPosts().then(function (response) {
@@ -9,7 +11,4 @@ app.component('postsList', {
   templateUrl: 'post-list/posts-list.html',
   controller: PostsListController,
   controllerAs: 'vm'
-
-
 });
-
