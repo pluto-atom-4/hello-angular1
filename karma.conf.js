@@ -6,10 +6,14 @@ module.exports = function(config) {
 
     files: [
       'lib/angular/angular.js',
+      'lib/angular-papa-promise/dist/angular-papa-promise.js',
       'lib/angular-route/angular-route.js',
+      'lib/ng-file-upload/dist/ng-file-upload.js',
+      'lib/papaparse/papaparse.js',
       '../node_modules/angular-mocks/angular-mocks.js',
       'core/**/*.js',
-      'view*/**/*.js'
+      'view*/**/*.js',
+      'upload-parse/**/*.js'
     ],
 
     autoWatch: true,

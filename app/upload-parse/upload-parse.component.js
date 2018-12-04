@@ -3,6 +3,8 @@
 function UploadParseController($scope, Papa) {
   var vm = this;
   vm.parsedJson = {conferences: []};
+  vm.myTitle = 'Unit Testing AngularJS';
+
   $scope.parseFile = function (file) {
     console.info(file);
 
@@ -35,13 +37,19 @@ function UploadParseController($scope, Papa) {
 }
 
 
-angular.module('myApp.upload-parse', [
+angular.module('myApp.uploadParseModule', [
   'ngFileUpload',
   'papa-promise',
 ])
 
   .component('uploadParse', {
-    templateUrl: 'upload-parse/upload-parse.html',
+    bindings: {
+      myBinding: '@'
+    },
     controller: UploadParseController,
-    controllerAs: 'vm'
+    controllerAs: 'vm',
+    template: '<h1>{{ vm.myTitle }} {{ vm.myBinding}}</h1> ' +
+      '<div name="test">test</div> ' +
+      '<li>test2</li> ' +
+      '<button ngf-select ng-model="file" ngf-change="parseFile(file)">select csv</button>'
   });

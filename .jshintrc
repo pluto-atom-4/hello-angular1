@@ -1,5 +1,6 @@
 {
   "strict": "global",
+  "node": true,
   "globals": {
     // AngularJS
     "angular": false,
